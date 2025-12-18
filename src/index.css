@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DeliOPS-PRO Premium Design System */
+
+@layer base {
+  :root {
+    /* Dark Theme (Default) */
+    --background: 225 25% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 225 20% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 20% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 185 85% 50%;
+    --primary-foreground: 225 25% 4%;
+
+    --secondary: 225 15% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 225 15% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 185 70% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 145 65% 45%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 225 25% 4%;
+
+    --border: 225 15% 18%;
+    --input: 225 15% 15%;
+    --ring: 185 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* Glass effects */
+    --glass-bg: 225 20% 8% / 0.6;
+    --glass-border: 225 15% 25% / 0.3;
+    --glass-glow: 185 85% 50% / 0.15;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(185 85% 50%), hsl(200 90% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(225 25% 6%), hsl(225 25% 3%));
+    --gradient-card: linear-gradient(145deg, hsl(225 20% 10%), hsl(225 20% 6%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(185 85% 50% / 0.2), transparent 70%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(225 50% 2% / 0.4);
+    --shadow-md: 0 4px 20px hsl(225 50% 2% / 0.5);
+    --shadow-lg: 0 8px 40px hsl(225 50% 2% / 0.6);
+    --shadow-glow: 0 0 30px hsl(185 85% 50% / 0.3);
+    --shadow-glow-sm: 0 0 15px hsl(185 85% 50% / 0.2);
+
+    --sidebar-background: 225 20% 6%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 185 85% 50%;
+    --sidebar-primary-foreground: 225 25% 4%;
+    --sidebar-accent: 225 15% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 225 15% 15%;
+    --sidebar-ring: 185 85% 50%;
+  }
+
+  /* Light Theme */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 185 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 185 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* Glass effects for light theme */
+    --glass-bg: 0 0% 100% / 0.8;
+    --glass-border: 214.3 31.8% 91.4% / 0.5;
+    --glass-glow: 185 85% 50% / 0.1;
+
+    /* Gradients for light theme */
+    --gradient-primary: linear-gradient(135deg, hsl(185 85% 50%), hsl(200 90% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(185 85% 50% / 0.1), transparent 70%);
+
+    /* Shadows for light theme */
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 30px hsl(185 85% 50% / 0.15);
+    --shadow-glow-sm: 0 0 15px hsl(185 85% 50% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 185 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 84% 4.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 185 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+    transition: background 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl;
+    background: linear-gradient(145deg, hsl(var(--glass-bg)), hsl(var(--glass-bg)));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-md);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    border-color: hsl(185 85% 50% / 0.3);
+    box-shadow: var(--shadow-lg), var(--shadow-glow-sm);
+    transform: translateY(-2px);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(185 85% 50% / 0.5);
+  }
+
+  .glow-border {
+    box-shadow: inset 0 0 20px hsl(185 85% 50% / 0.1), var(--shadow-glow-sm);
+  }
+
+  .stat-card {
+    @apply glass-card-hover p-6;
+    position: relative;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .stat-card:hover::before {
+    opacity: 1;
+  }
+
+  .sidebar-glass {
+    background: linear-gradient(180deg, hsl(var(--sidebar-background) / 0.95), hsl(var(--sidebar-background) / 0.9));
+    backdrop-filter: blur(30px);
+    border-right: 1px solid hsl(var(--sidebar-border) / 0.5);
+  }
+
+  .nav-item {
+    @apply relative flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200;
+    color: hsl(var(--sidebar-foreground));
+  }
+
+  .nav-item:hover {
+    background: hsl(var(--sidebar-accent) / 0.5);
+    color: hsl(var(--sidebar-accent-foreground));
+  }
+
+  .nav-item.active {
+    background: linear-gradient(90deg, hsl(185 85% 50% / 0.15), transparent);
+    color: hsl(185 85% 55%);
+    border-left: 2px solid hsl(185 85% 50%);
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-active {
+    @apply status-badge;
+    background: hsl(145 65% 45% / 0.15);
+    color: hsl(145 65% 55%);
+    border: 1px solid hsl(145 65% 45% / 0.3);
+  }
+
+  .status-idle {
+    @apply status-badge;
+    background: hsl(38 92% 55% / 0.15);
+    color: hsl(38 92% 60%);
+    border: 1px solid hsl(38 92% 55% / 0.3);
+  }
+
+  .status-inactive {
+    @apply status-badge;
+    background: hsl(0 72% 55% / 0.15);
+    color: hsl(0 72% 60%);
+    border: 1px solid hsl(0 72% 55% / 0.3);
+  }
+
+  .status-project-change {
+    @apply status-badge;
+    background: hsl(280 70% 55% / 0.15);
+    color: hsl(280 70% 65%);
+    border: 1px solid hsl(280 70% 55% / 0.3);
+  }
+
+  .btn-primary-glow {
+    @apply relative overflow-hidden;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow-sm);
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-1px);
+  }
+
+  .input-glass {
+    @apply bg-muted/50 border-border/50 focus:border-primary/50 focus:ring-primary/20;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@layer utilities {
+  /* UAE Dirhams Currency Symbol */
+  .currency-symbol-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMDAgODcwIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4NzAiPgoJPHRpdGxlPkxheWVyIGNvcHk8L3RpdGxlPgoJPHN0eWxlPgoJCS5zMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8cGF0aCBpZD0iTGF5ZXIgY29weSIgY2xhc3M9InMwIiBkPSJtODguMyAxYzAuNCAwLjYgMi42IDMuMyA0LjcgNS45IDE1LjMgMTguMiAyNi44IDQ3LjggMzMgODUuMSA0LjEgMjQuNSA0LjMgMzIuMiA0LjMgMTI1LjZ2ODdoLTQxLjhjLTM4LjIgMC00Mi42LTAuMi01MC4xLTEuNy0xMS44LTIuNS0yNC05LjItMzIuMi0xNy44LTYuNS02LjktNi4zLTcuMy01LjkgMTMuNiAwLjUgMTcuMyAwLjcgMTkuMiAzLjIgMjguNiA0IDE0LjkgOS41IDI2AxNy44gMzUuOSA5LjggNS4xIDEwLjggOS4yIDE4LjYgMTMuOSA1LjUgMi41IDEwLjkgNC4zIDE1LjUgOC4yIDMuMSAxLjMgMTAuOSA0LjcgMzcuMSAzLjZsMzIuNyAwLjV2NDMuMyA0My40bC00Ni4xLTAuMy00Ni4zLTAuMy04LTMuMmMtOS41LTMuOC0xMy44LTYuNi0yMy4xLTE0LjlsLTYuOC02LjEgMC40IDE5LjFjMC41IDE3LjcgMC42IDE5LjcgMy4xIDI4LjcgOC43IDMxLjggMjkuNyA1NC41IDU3LjQgNjEuOSA2LjkgMS45IDkuNiAyIDM4LjUgMi41bDMwLjkgMC40djg5LjZjMCA1NC4xLTAuMyA5NC0wLjggMTAwLjgtMC41IDYuMi0yLjEgMTcuOC0zLjUgMjUuOS02LjUgMzcuMy0xOC4yIDY1LjQtMzUgODMuNmwtMy40IDMuN2gxNjkuMWMxMDEuMSAwIDE3Ni43LTAuNCAxODcuOC0wLjkgMTkuNS0xIDYzLTUuMyA3Mi44LTcuNCAzLjEtMC42IDguOS0xLjUgMTIuNy0yLjEgOC4xLTEuMiAyMS41LTQgNDAuOC04LjkgMjcuMi02LjggNTItMTUuMyA3Ni4zLTI2LjEgNy42LTMuNCAyOS40LTE0LjUgMzUuMi0xOCA2LjgtMS44IDYuOC00IDguMi00LjcgMy45LTIuMSAxMC40LTYuMyAxOS45LTEzLjEgNC43LTMuNCA5LjQtNi43IDEwLjQtNy40IDQuMi0yLjggMTguNy0xNC45IDI1LjMtMjEgMjUuMS0yMy4xIDQ2LjEtNDguOCA2Mi40LTc2LjMgMi4zLTQgNS4zLTkgNi42LTExLjEgMy4zLTUuNiAxNi45LTMzLjYgMTguMi0zNy44IDAuNi0xLjkgMS40LTMuOSAxLjgtNC4zIDIuNi0zLjQgMTcuNi01MC42IDE5LjQtNjAuOSAwLjYtMy4zIDAuOS0zLjggMy40LTQuMyAxLjYtMC4zIDI0LjktMC4zIDUxLjgtMC4xIDUzLjggMC40IDUzLjggMC40IDY1LjcgNS45IDYuNyAzLjEgOC43IDQuNSAxNi4xIDExLjIgOS43IDguNyA4LjggMTAuMSA4LjItMTEuNy0wLjQtMTIuOC0wLjktMjAuNy0xLjgtMjMuOS0zLjQtMTIuMy00LjItMTQuOS03LjItMjEuMS05LjgtMjEuNC0yNi4yLTM2LjctNDcuMi00NGwtOC4yLTMtMzMuNC0wLjQtMzMuMy0wLjUgMC40LTExLjdjMC40LTE1LjQgMC40LTQ1LjktMC4xLTYxLjZsLTAuNC0xMi42IDQ0LjYtMC4yYzMzguaS0wLjIgNDUuMyAwIDQ5LjUgMS4xIDEyLjYgMy41IDIxLjEgOC4zIDMxLjUgMTcuOGw1LjggNS40di0xNC44YzAtMTcuNi0wLjktMjUuNC00LjUtMzctNy4xLTIzLjUtMjEuMS00MS00MS4xLTUxLjgtMTMtNy0xMy44LTcuMi01OC41LTcuNS0yNi4yLTAuMi0zOS45LTAuNi00MC42LTEuMi0wLjYtMC42LTEuMS0xLjYtMS4xLTIuNCAwLTAuOC0xLjUtNy4xLTMuNS0xMy45LTIzLjQtODIuNy02Ny4xLTE0OC40LTEzMS0xOTcuMS04LjctNi43LTMwLTIwLjgtMzguNi0yNS42LTMuMy0xLjktNi45LTMuOS03LjgtNC41LTQuMi0yLjMtMjguMy0xNC4xLTM0LjMtMTYuNi0zLjYtMS42LTguMy0zLjYtMTAuNC00LjQtMzUuMy0xNS4zLTk0LjUtMjkuOC0xMzkuNy0zNC4zLTcuNC0wLjctMTcuMi0xLjgtMjEuNy0yLjItMjAuNC0yLjMtNDguNy0yLjYtMjA5LjQtMi42LTEzNS44IDAtMTY5LjkgMC4zLTE2OS40IDF6bTMzMC43IDQzLjNjMzMuOCAyIDU0LjYgNC42IDc4LjkgMTAuNSA3NC4yIDE3LjYgMTI2LjQgNTQuOCAxNjQuMyAxMTcgMy41IDUuOCAxOC4zIDM2IDIwLjUgNDIuMSAxMC41IDI4LjMgMTUuNiA0NS4xIDIwLjEgNjcuMyAxLjEgNS40IDIuNiAxMi42IDMuMyAxNiAwLjcgMy4zIDEgNi40IDAuNyA2LjctMC41IDAuNC0xMDAuOSAwLjYtMjIzLjMgMC41bC0yMjIuNS0wLjItMC4zLTEyOC41Yy0wLjEtNzAuNiAwLTEyOS4zIDAuMy0xMzAuNGwwLjQtMS45aDcxLjFjMzkgMCA3OCAwLjQgODYuNSAwLjl6bTI5Ny41IDM1MC4zYzAuNyA0LjMgMC43IDc3LjMgMCA4MC45bC0wLjYgMi43LTIyNy41LTAuMi0yMjcuNC0wLjMtMC4yLTQyLjRjLTAuMi0yMy4zIDAtNDIuNyAwLjItNDMuMSAwLjMtMC41IDk3LjItMC44IDIyNy43LTAuOGgyMjcuMnptLTEwLjIgMTcxLjdjMC41IDEuNS0xLjkgMTMuOC02LjggMzMuOC01LjYgMjIuNS0xMy4yIDQ1LjItMjAuOSA2Mi0zLjggOC42LTEzLjMgMjcuMi0xNS42IDMwLjctMS4xIDEuNi00LjMgNi43LTcuMSAxMS4yLTE4IDI4LjItNDMuNyA1My45LTczIDcyLjktMTAuNyA2LjgtMzIuNyAxOC40LTM4LjYgMjAuMi0xLjIgMC4zLTIuNSAwLjktMyAxLjMtMC43IDAuNi05LjggNC0yMC40IDcuOC0xOS41IDYuOS01Ni42IDE0LjQtODYuNCAxNy41LTE5LjMgMS45LTIyLjQgMi05Ni43IDJoLTc2Ljl2LTEyOS43LTEyOS44bDIyMC45LTAuNGMxMjEuNS0wLjIgMjIxLjYtMC41IDIyMi40LTAuNyAwLjktMC4xIDEuOCAwLjUgMi4xIDEuMnoiLz4KPC9zdmc+');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-counter {
+    animation: counter-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--shadow-glow-sm); }
+    50% { box-shadow: var(--shadow-glow); }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulseGlow {
+    from { transform: scale(1) translateY(0); opacity: .45; }
+    to { transform: scale(1.05) translateY(-8px); opacity: .62; }
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes counter-pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+}
